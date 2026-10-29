@@ -1,1 +1,641 @@
-# java
+Laboratory on Internet and Java Programming
+Easy practical-exam reference codes, transcribed from the supplied PDF.
+Each program is kept under its original practical assignment and question. Some questions contain multiple Java classes or JSP/Servlet files.
+
+PRACTICAL ASSIGNMENT - 1
+Java Fundamentals, Loops and Basic Number Programs
+Q1. Sum of 10 numbers
+import java.util.*;
+class Sum {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int sum = 0;
+        for(int i=1;i<=10;i++)
+            sum += s.nextInt();
+        System.out.println(sum);
+    }
+}
+Q2. Factorial using command-line argument
+class Fact {
+    public static void main(String[] args) {
+        int n = Integer.parseInt(args[0]);
+        int f = 1;
+        for(int i=1;i<=n;i++)
+            f *= i;
+        System.out.println(f);
+    }
+}
+Q3. Decimal to binary and binary to decimal
+import java.util.*;
+class Convert {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        System.out.println(Integer.toBinaryString(n));
+        String b = s.next();
+        System.out.println(Integer.parseInt(b,2));
+    }
+}
+Q4. Prime number
+import java.util.*;
+class Prime {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        int n = s.nextInt(), c = 0;
+        for(int i=1;i<=n;i++)
+            if(n%i==0) c++;
+        if(c==2)
+            System.out.println("Prime");
+        else
+            System.out.println("Not Prime");
+    }
+}
+Q5. Display A to Z
+class AZ {
+    public static void main(String[] args) {
+        for(char c='A';c<='Z';c++)
+            System.out.print(c+" ");
+    }
+}
+Q6. Count digits
+import java.util.*;
+class Digits {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n=s.nextInt(), c=0;
+        while(n!=0) {
+            c++;
+            n/=10;
+        }
+        System.out.println(c);
+    }
+}
+Q7. Reverse a number
+import java.util.*;
+class Reverse {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n=s.nextInt(), r=0;
+        while(n!=0) {
+            r=r*10+n%10;
+            n/=10;
+        }
+        System.out.println(r);
+    }
+}
+Q8. Power of a number
+import java.util.*;
+class Power {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt(), b=s.nextInt(), r=1;
+        for(int i=1;i<=b;i++)
+            r*=a;
+        System.out.println(r);
+    }
+}
+PRACTICAL ASSIGNMENT - 2
+Arrays, Functions and Number-Based Applications
+Q1. Single-dimensional array
+class Array1 {
+    public static void main(String[] args) {
+        int a[]={10,20,30,40,50};
+        for(int i:a)
+            System.out.println(i);
+    }
+}
+Q2. Two-dimensional array
+class Array2 {
+    public static void main(String[] args) {
+        int a[][]={{1,2},{3,4}};
+        for(int i=0;i<2;i++) {
+            for(int j=0;j<2;j++)
+                System.out.print(a[i][j]+" ");
+            System.out.println();
+        }
+    }
+}
+Q3. Sum of N integers using command-line argument
+import java.util.*;
+class SumN {
+    public static void main(String[] args) {
+        int n=Integer.parseInt(args[0]);
+        Scanner s=new Scanner(System.in);
+        int sum=0;
+        for(int i=1;i<=n;i++)
+            sum+=s.nextInt();
+        System.out.println(sum);
+
+    }
+}
+Q4. Palindrome number
+import java.util.*;
+class Palindrome {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt(), x=n, r=0;
+        while(n!=0) {
+            r=r*10+n%10;
+            n/=10;
+        }
+        if(x==r)
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
+Q5. Prime number
+import java.util.*;
+class Prime {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt(), c=0;
+        for(int i=1;i<=n;i++)
+            if(n%i==0) c++;
+        System.out.println(c==2 ? "Prime" : "Not Prime");
+    }
+}
+Q6. Prime numbers between two numbers
+import java.util.*;
+class PrimeRange {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt(), b=s.nextInt();
+        for(int n=a;n<=b;n++) {
+            int c=0;
+            for(int i=1;i<=n;i++)
+                if(n%i==0) c++;
+            if(c==2)
+                System.out.print(n+" ");
+        }
+    }
+}
+Q7. Armstrong number
+import java.util.*;
+class Armstrong {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt(), x=n, sum=0;
+        while(n!=0) {
+            int d=n%10;
+            sum+=d*d*d;
+            n/=10;
+        }
+        if(sum==x)
+            System.out.println("Armstrong");
+        else
+            System.out.println("Not Armstrong");
+    }
+}
+Q8. Armstrong numbers between two numbers
+import java.util.*;
+class ArmstrongRange {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt(), b=s.nextInt();
+        for(int n=a;n<=b;n++) {
+            int x=n, sum=0;
+            while(x!=0) {
+                int d=x%10;
+                sum+=d*d*d;
+                x/=10;
+            }
+            if(sum==n)
+                System.out.print(n+" ");
+        }
+    }
+}
+PRACTICAL ASSIGNMENT - 3
+Strings, Classes, Objects and Object-Oriented Programming
+Q1. String and StringBuffer functions
+class StringTest {
+    public static void main(String[] args) {
+        String a="Hello";
+        StringBuffer b=new StringBuffer("Java");
+        b.setCharAt(0,'j');
+
+        b.setLength(3);
+        b.append(" Program");
+        b.insert(0,"My ");
+        System.out.println(b);
+        System.out.println(a.concat(" World"));
+        System.out.println(a.equals("Hello"));
+    }
+}
+Q2. Time class and this keyword
+class Time {
+    int h,m;
+    void set(int h,int m) {
+        this.h=h;
+        this.m=m;
+    }
+    void show() {
+        System.out.println(h+" hours "+m+" minutes");
+    }
+}
+class Test {
+    public static void main(String[] args) {
+        Time t=new Time();
+        t.set(2,30);
+        t.show();
+    }
+}
+Q3. Time constructor, reference and clone
+class Time implements Cloneable {
+    int h,m;
+    Time(int h,int m) {
+        this.h=h;
+        this.m=m;
+    }
+    void show() {
+        System.out.println(h+" "+m);
+    }
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+}
+class Test {
+    public static void main(String[] args) throws Exception {
+        Time t1=new Time(2,30);
+        Time t2=t1;
+
+        Time t3=(Time)t1.clone();
+        t1.show();
+        t2.show();
+        t3.show();
+    }
+}
+Q4. Function overloading
+class Overload {
+    void show(int x) {
+        System.out.println(x);
+    }
+    void show(double x) {
+        System.out.println(x);
+    }
+    public static void main(String[] args) {
+        Overload o=new Overload();
+        o.show(10);
+        o.show(10.5);
+        o.show('A');
+    }
+}
+Q5. Public, private, value/reference and final
+class Demo {
+    public int a=10;
+    private int b=20;
+    final int c=30;
+    void show() {
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+    }
+    public static void main(String[] args) {
+        Demo d=new Demo();
+        d.show();
+        int x=5;
+        change(x);
+        System.out.println(x);
+        changeObject(d);
+        System.out.println(d.a);
+    }
+    static void change(int x) {
+        x=100;
+    }
+    static void changeObject(Demo d) {
+        d.a=100;
+    }
+
+}
+Q6. Static function and variable arguments
+class StaticTest {
+    static int sum(int... a) {
+        int s=0;
+        for(int x:a)
+            s+=x;
+        return s;
+    }
+    public static void main(String[] args) {
+        System.out.println(sum(10,20,30));
+    }
+}
+Q7. Protection levels
+class Parent {
+    public int a=1;
+    protected int b=2;
+    int c=3;
+    private int d=4;
+}
+class Child extends Parent {
+    void show() {
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+    }
+}
+class Test {
+    public static void main(String[] args) {
+        new Child().show();
+    }
+}
+/*
+public = everywhere
+protected = package + child
+default = same package
+private = same class
+*/
+PRACTICAL ASSIGNMENT - 4
+Exception Handling, Networking and Event Handling
+Q1. Divide by zero
+import java.util.*;
+class DivideByZero {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        try {
+            int a=s.nextInt();
+            int b=s.nextInt();
+            System.out.println(a/b);
+        }
+        catch(ArithmeticException e) {
+            System.out.println("Cannot divide by zero");
+        }
+    }
+}
+Q2. Nested try
+class Nested {
+    public static void main(String[] args) {
+        try {
+            try {
+                int x=10/0;
+            }
+            catch(ArithmeticException e) {
+                System.out.println("Arithmetic Error");
+            }
+        }
+        catch(Exception e) {
+            System.out.println("Error");
+        }
+    }
+}
+Q3. User-defined exception
+class AgeException extends Exception {
+    AgeException(String s) {
+        super(s);
+    }
+}
+class Test {
+    public static void main(String[] args) {
+        int age=15;
+        try {
+
+            if(age<18)
+                throw new AgeException("Not Eligible");
+            System.out.println("Eligible");
+        }
+        catch(AgeException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+Q4. URL connection
+import java.net.*;
+class URLTest {
+    public static void main(String[] args) throws Exception {
+        URL u=new URL("https://www.google.com");
+        URLConnection c=u.openConnection();
+        c.connect();
+        System.out.println(u.getProtocol());
+        System.out.println(u.getHost());
+        System.out.println(u.getFile());
+    }
+}
+Q5. Datagram server
+import java.net.*;
+import java.util.*;
+class Server {
+    public static void main(String[] args) throws Exception {
+        DatagramSocket s=new DatagramSocket(5000);
+        Scanner sc=new Scanner(System.in);
+        String msg=sc.nextLine();
+        byte data[]=msg.getBytes();
+        DatagramPacket p=new DatagramPacket(
+            data,data.length,
+            InetAddress.getByName("localhost"),6000);
+        s.send(p);
+        s.close();
+    }
+}
+Q5. Datagram client
+import java.net.*;
+class Client {
+    public static void main(String[] args) throws Exception {
+        DatagramSocket s=new DatagramSocket(6000);
+        byte data[]=new byte[100];
+        DatagramPacket p=new DatagramPacket(data,data.length);
+
+        s.receive(p);
+        System.out.println(new String(
+            p.getData(),0,p.getLength()));
+        s.close();
+    }
+}
+Q6. Mouse events
+import java.awt.*;
+import java.awt.event.*;
+class MouseTest extends Frame implements MouseListener {
+    MouseTest() {
+        addMouseListener(this);
+        setSize(400,300);
+        setVisible(true);
+    }
+    public void mouseClicked(MouseEvent e) {
+        System.out.println("Clicked");
+    }
+    public void mouseEntered(MouseEvent e) {
+        System.out.println("Entered");
+    }
+    public void mouseExited(MouseEvent e) {
+        System.out.println("Exited");
+    }
+    public void mousePressed(MouseEvent e) {
+        System.out.println("Pressed");
+    }
+    public void mouseReleased(MouseEvent e) {
+        System.out.println("Released");
+    }
+    public static void main(String[] args) {
+        new MouseTest();
+    }
+}
+Q7. Keyboard events
+import java.awt.*;
+import java.awt.event.*;
+class KeyTest extends Frame implements KeyListener {
+    KeyTest() {
+        addKeyListener(this);
+        setSize(400,300);
+        setVisible(true);
+    }
+    public void keyPressed(KeyEvent e) {
+        System.out.println("Pressed");
+    }
+
+    public void keyReleased(KeyEvent e) {
+        System.out.println("Released");
+    }
+    public void keyTyped(KeyEvent e) {
+        System.out.println("Typed");
+    }
+    public static void main(String[] args) {
+        new KeyTest();
+    }
+}
+Q8. Window using main()
+import java.awt.*;
+class WindowTest {
+    public static void main(String[] args) {
+        Frame f=new Frame("My Window");
+        f.setSize(400,300);
+        f.setVisible(true);
+    }
+}
+Q9. Traffic signal
+import java.awt.*;
+class Signal extends Frame {
+    Signal() {
+        setSize(200,300);
+        setVisible(true);
+    }
+    public void paint(Graphics g) {
+        g.setColor(Color.RED);
+        g.fillOval(70,50,50,50);
+        g.setColor(Color.YELLOW);
+        g.fillOval(70,120,50,50);
+        g.setColor(Color.GREEN);
+        g.fillOval(70,190,50,50);
+    }
+    public static void main(String[] args) {
+        new Signal();
+    }
+}
+PRACTICAL ASSIGNMENT - 5
+Advanced Java, Functions, JSP, Servlet and MVC
+Q1. Prime numbers using function
+import java.util.*;
+class PrimeFunction {
+    static boolean prime(int n) {
+        if(n<2) return false;
+        for(int i=2;i<n;i++)
+            if(n%i==0) return false;
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt(), b=s.nextInt();
+        for(int i=a;i<=b;i++)
+            if(prime(i))
+                System.out.print(i+" ");
+    }
+}
+Q2. Armstrong numbers using function
+import java.util.*;
+class ArmstrongFunction {
+    static boolean armstrong(int n) {
+        int x=n, sum=0;
+        while(n!=0) {
+            int d=n%10;
+            sum+=d*d*d;
+            n/=10;
+        }
+        return sum==x;
+    }
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt(), b=s.nextInt();
+        for(int i=a;i<=b;i++)
+            if(armstrong(i))
+                System.out.print(i+" ");
+    }
+}
+Q3. Factors of a number
+import java.util.*;
+class Factors {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+
+        int n=s.nextInt();
+        for(int i=1;i<=n;i++)
+            if(n%i==0)
+                System.out.print(i+" ");
+    }
+}
+Q4. Calculator using switch
+import java.util.*;
+class Calculator {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        double a=s.nextDouble();
+        char op=s.next().charAt(0);
+        double b=s.nextDouble();
+        switch(op) {
+            case '+': System.out.println(a+b); break;
+            case '-': System.out.println(a-b); break;
+            case '*': System.out.println(a*b); break;
+            case '/': System.out.println(a/b); break;
+        }
+    }
+}
+Q5. Simple JSP page
+<html>
+<body>
+<h2>Hello JSP</h2>
+<%
+int a=10, b=20;
+%>
+Sum = <%= a+b %>
+</body>
+</html>
+Q6. JSP cookies and session
+<%@ page import="java.net.*" %>
+<html>
+<body>
+<%
+Cookie c=new Cookie("user","Girish");
+response.addCookie(c);
+session.setAttribute("name","Girish");
+%>
+Cookie Created<br>
+Session = <%= session.getAttribute("name") %>
+</body>
+
+</html>
+Q7. Simple MVC using Servlet and JSP
+// Model.java
+class Model {
+    String getMessage() {
+        return "Hello MVC";
+    }
+}
+// Controller.java
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import java.io.*;
+public class Controller extends HttpServlet {
+    protected void doGet(
+        HttpServletRequest request,
+        HttpServletResponse response)
+        throws ServletException, IOException {
+        Model m=new Model();
+        request.setAttribute("msg",m.getMessage());
+        RequestDispatcher r=
+            request.getRequestDispatcher("view.jsp");
+        r.forward(request,response);
+    }
+}
+// view.jsp
+<html>
+<body>
+<%= request.getAttribute("msg") %>
+</body>
+</html>
