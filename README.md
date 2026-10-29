@@ -1,10 +1,16 @@
-Laboratory on Internet and Java Programming
-Easy practical-exam reference codes, transcribed from the supplied PDF.
-Each program is kept under its original practical assignment and question. Some questions contain multiple Java classes or JSP/Servlet files.
+````text
+# Laboratory on Internet and Java Programming
 
-PRACTICAL ASSIGNMENT - 1
-Java Fundamentals, Loops and Basic Number Programs
-Q1. Sum of 10 numbers
+Easy practical-exam reference codes, transcribed from the supplied PDF.
+
+> Each program is kept under its original practical assignment and question. Some questions contain multiple Java classes or JSP/Servlet files.
+
+## PRACTICAL ASSIGNMENT - 1
+### Java Fundamentals, Loops and Basic Number Programs
+
+#### Q1. Sum of 10 numbers
+
+```java
 import java.util.*;
 class Sum {
     public static void main(String[] args) {
@@ -15,7 +21,11 @@ class Sum {
         System.out.println(sum);
     }
 }
-Q2. Factorial using command-line argument
+```
+
+#### Q2. Factorial using command-line argument
+
+```java
 class Fact {
     public static void main(String[] args) {
         int n = Integer.parseInt(args[0]);
@@ -25,7 +35,11 @@ class Fact {
         System.out.println(f);
     }
 }
-Q3. Decimal to binary and binary to decimal
+```
+
+#### Q3. Decimal to binary and binary to decimal
+
+```java
 import java.util.*;
 class Convert {
     public static void main(String[] args) {
@@ -36,7 +50,11 @@ class Convert {
         System.out.println(Integer.parseInt(b,2));
     }
 }
-Q4. Prime number
+```
+
+#### Q4. Prime number
+
+```java
 import java.util.*;
 class Prime {
     public static void main(String[] args) {
@@ -51,14 +69,22 @@ class Prime {
             System.out.println("Not Prime");
     }
 }
-Q5. Display A to Z
+```
+
+#### Q5. Display A to Z
+
+```java
 class AZ {
     public static void main(String[] args) {
         for(char c='A';c<='Z';c++)
             System.out.print(c+" ");
     }
 }
-Q6. Count digits
+```
+
+#### Q6. Count digits
+
+```java
 import java.util.*;
 class Digits {
     public static void main(String[] args) {
@@ -71,7 +97,11 @@ class Digits {
         System.out.println(c);
     }
 }
-Q7. Reverse a number
+```
+
+#### Q7. Reverse a number
+
+```java
 import java.util.*;
 class Reverse {
     public static void main(String[] args) {
@@ -84,7 +114,11 @@ class Reverse {
         System.out.println(r);
     }
 }
-Q8. Power of a number
+```
+
+#### Q8. Power of a number
+
+```java
 import java.util.*;
 class Power {
     public static void main(String[] args) {
@@ -95,9 +129,14 @@ class Power {
         System.out.println(r);
     }
 }
-PRACTICAL ASSIGNMENT - 2
-Arrays, Functions and Number-Based Applications
-Q1. Single-dimensional array
+```
+
+## PRACTICAL ASSIGNMENT - 2
+### Arrays, Functions and Number-Based Applications
+
+#### Q1. Single-dimensional array
+
+```java
 class Array1 {
     public static void main(String[] args) {
         int a[]={10,20,30,40,50};
@@ -105,7 +144,11 @@ class Array1 {
             System.out.println(i);
     }
 }
-Q2. Two-dimensional array
+```
+
+#### Q2. Two-dimensional array
+
+```java
 class Array2 {
     public static void main(String[] args) {
         int a[][]={{1,2},{3,4}};
@@ -116,7 +159,11 @@ class Array2 {
         }
     }
 }
-Q3. Sum of N integers using command-line argument
+```
+
+#### Q3. Sum of N integers using command-line argument
+
+```java
 import java.util.*;
 class SumN {
     public static void main(String[] args) {
@@ -129,7 +176,11 @@ class SumN {
 
     }
 }
-Q4. Palindrome number
+```
+
+#### Q4. Palindrome number
+
+```java
 import java.util.*;
 class Palindrome {
     public static void main(String[] args) {
@@ -145,7 +196,11 @@ class Palindrome {
             System.out.println("Not Palindrome");
     }
 }
-Q5. Prime number
+```
+
+#### Q5. Prime number
+
+```java
 import java.util.*;
 class Prime {
     public static void main(String[] args) {
@@ -156,7 +211,11 @@ class Prime {
         System.out.println(c==2 ? "Prime" : "Not Prime");
     }
 }
-Q6. Prime numbers between two numbers
+```
+
+#### Q6. Prime numbers between two numbers
+
+```java
 import java.util.*;
 class PrimeRange {
     public static void main(String[] args) {
@@ -171,7 +230,11 @@ class PrimeRange {
         }
     }
 }
-Q7. Armstrong number
+```
+
+#### Q7. Armstrong number
+
+```java
 import java.util.*;
 class Armstrong {
     public static void main(String[] args) {
@@ -188,7 +251,11 @@ class Armstrong {
             System.out.println("Not Armstrong");
     }
 }
-Q8. Armstrong numbers between two numbers
+```
+
+#### Q8. Armstrong numbers between two numbers
+
+```java
 import java.util.*;
 class ArmstrongRange {
     public static void main(String[] args) {
@@ -206,9 +273,14 @@ class ArmstrongRange {
         }
     }
 }
-PRACTICAL ASSIGNMENT - 3
-Strings, Classes, Objects and Object-Oriented Programming
-Q1. String and StringBuffer functions
+```
+
+## PRACTICAL ASSIGNMENT - 3
+### Strings, Classes, Objects and Object-Oriented Programming
+
+#### Q1. String and StringBuffer functions
+
+```java
 class StringTest {
     public static void main(String[] args) {
         String a="Hello";
@@ -223,7 +295,11 @@ class StringTest {
         System.out.println(a.equals("Hello"));
     }
 }
-Q2. Time class and this keyword
+```
+
+#### Q2. Time class and this keyword
+
+```java
 class Time {
     int h,m;
     void set(int h,int m) {
@@ -241,7 +317,11 @@ class Test {
         t.show();
     }
 }
-Q3. Time constructor, reference and clone
+```
+
+#### Q3. Time constructor, reference and clone
+
+```java
 class Time implements Cloneable {
     int h,m;
     Time(int h,int m) {
@@ -266,7 +346,11 @@ class Test {
         t3.show();
     }
 }
-Q4. Function overloading
+```
+
+#### Q4. Function overloading
+
+```java
 class Overload {
     void show(int x) {
         System.out.println(x);
@@ -281,7 +365,11 @@ class Overload {
         o.show('A');
     }
 }
-Q5. Public, private, value/reference and final
+```
+
+#### Q5. Public, private, value/reference and final
+
+```java
 class Demo {
     public int a=10;
     private int b=20;
@@ -308,7 +396,11 @@ class Demo {
     }
 
 }
-Q6. Static function and variable arguments
+```
+
+#### Q6. Static function and variable arguments
+
+```java
 class StaticTest {
     static int sum(int... a) {
         int s=0;
@@ -320,7 +412,11 @@ class StaticTest {
         System.out.println(sum(10,20,30));
     }
 }
-Q7. Protection levels
+```
+
+#### Q7. Protection levels
+
+```java
 class Parent {
     public int a=1;
     protected int b=2;
@@ -345,9 +441,14 @@ protected = package + child
 default = same package
 private = same class
 */
-PRACTICAL ASSIGNMENT - 4
-Exception Handling, Networking and Event Handling
-Q1. Divide by zero
+```
+
+## PRACTICAL ASSIGNMENT - 4
+### Exception Handling, Networking and Event Handling
+
+#### Q1. Divide by zero
+
+```java
 import java.util.*;
 class DivideByZero {
     public static void main(String[] args) {
@@ -362,7 +463,11 @@ class DivideByZero {
         }
     }
 }
-Q2. Nested try
+```
+
+#### Q2. Nested try
+
+```java
 class Nested {
     public static void main(String[] args) {
         try {
@@ -378,7 +483,11 @@ class Nested {
         }
     }
 }
-Q3. User-defined exception
+```
+
+#### Q3. User-defined exception
+
+```java
 class AgeException extends Exception {
     AgeException(String s) {
         super(s);
@@ -398,7 +507,11 @@ class Test {
         }
     }
 }
-Q4. URL connection
+```
+
+#### Q4. URL connection
+
+```java
 import java.net.*;
 class URLTest {
     public static void main(String[] args) throws Exception {
@@ -410,7 +523,11 @@ class URLTest {
         System.out.println(u.getFile());
     }
 }
-Q5. Datagram server
+```
+
+#### Q5. Datagram server
+
+```java
 import java.net.*;
 import java.util.*;
 class Server {
@@ -426,7 +543,11 @@ class Server {
         s.close();
     }
 }
-Q5. Datagram client
+```
+
+#### Q5. Datagram client
+
+```java
 import java.net.*;
 class Client {
     public static void main(String[] args) throws Exception {
@@ -440,7 +561,11 @@ class Client {
         s.close();
     }
 }
-Q6. Mouse events
+```
+
+#### Q6. Mouse events
+
+```java
 import java.awt.*;
 import java.awt.event.*;
 class MouseTest extends Frame implements MouseListener {
@@ -468,7 +593,11 @@ class MouseTest extends Frame implements MouseListener {
         new MouseTest();
     }
 }
-Q7. Keyboard events
+```
+
+#### Q7. Keyboard events
+
+```java
 import java.awt.*;
 import java.awt.event.*;
 class KeyTest extends Frame implements KeyListener {
@@ -491,7 +620,11 @@ class KeyTest extends Frame implements KeyListener {
         new KeyTest();
     }
 }
-Q8. Window using main()
+```
+
+#### Q8. Window using main()
+
+```java
 import java.awt.*;
 class WindowTest {
     public static void main(String[] args) {
@@ -500,7 +633,11 @@ class WindowTest {
         f.setVisible(true);
     }
 }
-Q9. Traffic signal
+```
+
+#### Q9. Traffic signal
+
+```java
 import java.awt.*;
 class Signal extends Frame {
     Signal() {
@@ -519,9 +656,14 @@ class Signal extends Frame {
         new Signal();
     }
 }
-PRACTICAL ASSIGNMENT - 5
-Advanced Java, Functions, JSP, Servlet and MVC
-Q1. Prime numbers using function
+```
+
+## PRACTICAL ASSIGNMENT - 5
+### Advanced Java, Functions, JSP, Servlet and MVC
+
+#### Q1. Prime numbers using function
+
+```java
 import java.util.*;
 class PrimeFunction {
     static boolean prime(int n) {
@@ -538,7 +680,11 @@ class PrimeFunction {
                 System.out.print(i+" ");
     }
 }
-Q2. Armstrong numbers using function
+```
+
+#### Q2. Armstrong numbers using function
+
+```java
 import java.util.*;
 class ArmstrongFunction {
     static boolean armstrong(int n) {
@@ -558,7 +704,11 @@ class ArmstrongFunction {
                 System.out.print(i+" ");
     }
 }
-Q3. Factors of a number
+```
+
+#### Q3. Factors of a number
+
+```java
 import java.util.*;
 class Factors {
     public static void main(String[] args) {
@@ -570,7 +720,11 @@ class Factors {
                 System.out.print(i+" ");
     }
 }
-Q4. Calculator using switch
+```
+
+#### Q4. Calculator using switch
+
+```java
 import java.util.*;
 class Calculator {
     public static void main(String[] args) {
@@ -586,7 +740,11 @@ class Calculator {
         }
     }
 }
-Q5. Simple JSP page
+```
+
+#### Q5. Simple JSP page
+
+```html
 <html>
 <body>
 <h2>Hello JSP</h2>
@@ -596,7 +754,11 @@ int a=10, b=20;
 Sum = <%= a+b %>
 </body>
 </html>
-Q6. JSP cookies and session
+```
+
+#### Q6. JSP cookies and session
+
+```html
 <%@ page import="java.net.*" %>
 <html>
 <body>
@@ -610,7 +772,11 @@ Session = <%= session.getAttribute("name") %>
 </body>
 
 </html>
-Q7. Simple MVC using Servlet and JSP
+```
+
+#### Q7. Simple MVC using Servlet and JSP
+
+```html
 // Model.java
 class Model {
     String getMessage() {
@@ -639,3 +805,5 @@ public class Controller extends HttpServlet {
 <%= request.getAttribute("msg") %>
 </body>
 </html>
+```
+````
